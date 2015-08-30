@@ -1,0 +1,46 @@
+### Swift dependencies file v0 ###
+provides:
+- "ICEUser"
+nominals:
+- "C3ICE7ICEUser"
+class-members:
+- "father"
+- "medicalTreatments"
+- "diseases"
+- "firstname"
+- "postcode"
+- "streetName"
+- "lastname"
+- "streetNumber"
+- "mother"
+- "bloodType"
+- "folders"
+- "physicians"
+- "allergies"
+- "scans"
+- "sons"
+- "country"
+- "medicines"
+top-level:
+- "NSManagedObject"
+- "String"
+- "ICEFamily"
+- "NSNumber"
+- "NSSet"
+- "ICEBloodType"
+member-access:
+- "C3ICE7ICEUser"
+- "CSo8NSObject"
+- "CSo15NSManagedObject"
+- "PSs9AnyObject"
+dynamic-lookup:
+cross-module:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/Security.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/CoreImage.swiftmodule"

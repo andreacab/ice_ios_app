@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4QS-Tj-3BD">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--ICESyncViewController-->
+        <scene sceneID="4Fx-e2-6aC">
+            <objects>
+                <viewController title="ICESyncViewController" id="pv3-sr-rnB" customClass="ICESyncViewController" customModule="ICE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sit-1T-h5h"/>
+                        <viewControllerLayoutGuide type="bottom" id="wew-F2-cVb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l4z-xf-gPo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to sync tab" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vca-qX-y9D">
+                                <rect key="frame" x="80" y="273" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sync" id="hps-WP-LVb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="he1-Kf-71D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1333" y="687"/>
+        </scene>
+        <!--MainTabBarController-->
+        <scene sceneID="vRB-tZ-mZe">
+            <objects>
+                <tabBarController title="MainTabBarController" id="4QS-Tj-3BD" customClass="ICETabBarController" customModule="ICE" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="LUo-fT-Myj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pv3-sr-rnB" kind="relationship" relationship="viewControllers" id="Mtx-D8-TnY"/>
+                        <segue destination="jwH-Tw-taN" kind="relationship" relationship="viewControllers" id="kaq-AO-g9u"/>
+                        <segue destination="ecI-YJ-3kl" kind="relationship" relationship="viewControllers" id="NTC-qM-XVJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XzL-Nz-QoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-950" y="-37"/>
+        </scene>
+        <!--ICEScanViewController-->
+        <scene sceneID="zks-di-XIb">
+            <objects>
+                <viewController title="ICEScanViewController" id="ecI-YJ-3kl" customClass="ICEScanViewController" customModule="ICE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I8v-Nx-s7m"/>
+                        <viewControllerLayoutGuide type="bottom" id="vcp-vg-yvy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XkN-Mf-CZH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to scan tab" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-be-c3c">
+                                <rect key="frame" x="79" y="273" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj5-Zo-GzT">
+                                <rect key="frame" x="135" y="302" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="B">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scan" id="t2V-nX-cOm"/>
+                    <connections>
+                        <outlet property="takePictureButton" destination="Sj5-Zo-GzT" id="4UK-nD-KQ1"/>
+                        <segue destination="jne-fg-gEy" kind="push" identifier="EditScan" id="Ryt-0w-I39"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biU-b5-fA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-559" y="687"/>
+        </scene>
+        <!--ICEUserSettingsViewController-->
+        <scene sceneID="ywf-M1-mBQ">
+            <objects>
+                <viewController title="ICEUserSettingsViewController" id="HLM-Dv-poz" customClass="ICEUserSettingsViewController" customModule="ICE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NjN-Vv-aii"/>
+                        <viewControllerLayoutGuide type="bottom" id="xGn-Uk-6Zn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IZo-tU-bCS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hMx-OD-d5v"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQy-sr-25O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1381" y="1453"/>
+        </scene>
+        <!--ICEFoldersCollectionViewController-->
+        <scene sceneID="cY5-wJ-zbB">
+            <objects>
+                <collectionViewController title="ICEFoldersCollectionViewController" id="amE-W0-Pyg" customClass="ICEFoldersCollectionViewController" customModule="ICE" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Tb8-FE-FEd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="10" id="ame-gx-Dh8">
+                            <size key="itemSize" width="80" height="80"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ICEFolderCell" id="vCg-6l-UFc" customClass="ICEFolderCell" customModule="ICE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fO-tr-iYg">
+                                            <rect key="frame" x="8" y="29" width="64" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="customSize" width="80" height="80"/>
+                                <connections>
+                                    <outlet property="label" destination="2fO-tr-iYg" id="ZOr-oL-sxJ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="amE-W0-Pyg" id="UT0-Xh-7jo"/>
+                            <outlet property="delegate" destination="amE-W0-Pyg" id="7lA-UF-UgL"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Folders" id="3Da-VP-EBS">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="ARI-cY-Tbr">
+                            <connections>
+                                <segue destination="HLM-Dv-poz" kind="push" id="NGT-Il-cmM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="hCD-Hl-ahv"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ICEFolderCollectionView" destination="Tb8-FE-FEd" id="Sl1-pR-lJt"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gus-hl-czb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-950" y="1453"/>
+        </scene>
+        <!--ICEScanEditViewController-->
+        <scene sceneID="sAE-z8-whU">
+            <objects>
+                <viewController storyboardIdentifier="ICEScanEditViewController" title="ICEScanEditViewController" id="jne-fg-gEy" customClass="ICEScanEditViewController" customModule="ICE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZA-x3-3Gv"/>
+                        <viewControllerLayoutGuide type="bottom" id="OmG-j0-oBF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bwL-9C-xaT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GDc-ZB-Sc0">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jtP-g3-d2e"/>
+                                    <barButtonItem title="Retake" id="WgL-Fa-Vlp">
+                                        <connections>
+                                            <action selector="retakeImage:" destination="jne-fg-gEy" id="upF-kd-QQP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Gju-LC-Bvx"/>
+                                    <barButtonItem title="Crop" id="Taw-ov-fuY">
+                                        <connections>
+                                            <action selector="cropImage:" destination="jne-fg-gEy" id="FTg-lI-NBo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6gh-rv-TZN"/>
+                                    <barButtonItem title="Save" id="TiJ-eG-2KS">
+                                        <connections>
+                                            <action selector="saveImage:" destination="jne-fg-gEy" id="hJE-N9-R5r"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MnK-Rt-ajL"/>
+                                </items>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EnN-u5-0J1"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fzJ-7r-D8s">
+                                <rect key="frame" x="0.0" y="469" width="320" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QuL-Yp-r4a">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BNh-I3-aST">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap to add a caption..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egx-Zx-a7W">
+                                <rect key="frame" x="0.0" y="431" width="320" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.12156862745098039" green="0.37254901960784315" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xbi-R1-SKu"/>
+                    <connections>
+                        <outlet property="captionTextField" destination="Egx-Zx-a7W" id="dQR-X9-5tZ"/>
+                        <outlet property="cropButton" destination="Taw-ov-fuY" id="EUh-Cg-dB3"/>
+                        <outlet property="retakeButton" destination="WgL-Fa-Vlp" id="4KR-aU-aeT"/>
+                        <outlet property="saveButton" destination="TiJ-eG-2KS" id="H5A-gB-eVI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXd-gm-i5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-115" y="703"/>
+        </scene>
+        <!--ICEFoldersNavigationController-->
+        <scene sceneID="cU7-Yc-On1">
+            <objects>
+                <navigationController title="ICEFoldersNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="jwH-Tw-taN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="gtd-dO-Tyk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ClX-J0-z7C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="amE-W0-Pyg" kind="relationship" relationship="rootViewController" id="2Va-d8-vCE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQ2-0T-wEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-950" y="687"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

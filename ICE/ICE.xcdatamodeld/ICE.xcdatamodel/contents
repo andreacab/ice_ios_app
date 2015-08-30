@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ICEAllergy" representedClassName="ICEAllergy" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEUser" inverseName="allergies" inverseEntity="ICEUser" syncable="YES"/>
+    </entity>
+    <entity name="ICEBloodType" representedClassName="ICEBloodType" syncable="YES">
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEUser" inverseName="bloodType" inverseEntity="ICEUser" syncable="YES"/>
+    </entity>
+    <entity name="ICEDisease" representedClassName="ICEDisease" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="medicalTreatments" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEMedicalTreatment" inverseName="diseases" inverseEntity="ICEMedicalTreatment" syncable="YES"/>
+        <relationship name="medicines" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEMedicine" inverseName="diseases" inverseEntity="ICEMedicine" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEUser" inverseName="diseases" inverseEntity="ICEUser" syncable="YES"/>
+    </entity>
+    <entity name="ICEFamily" representedClassName="ICEFamily" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="father" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ICEUser" inverseName="father" inverseEntity="ICEUser" syncable="YES"/>
+        <relationship name="mother" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ICEUser" inverseName="mother" inverseEntity="ICEUser" syncable="YES"/>
+        <relationship name="sons" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEUser" inverseName="sons" inverseEntity="ICEUser" syncable="YES"/>
+    </entity>
+    <entity name="ICEFolder" representedClassName="ICE.ICEFolder" syncable="YES">
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="scans" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ICEScan" inverseName="folder" inverseEntity="ICEScan" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ICEUser" inverseName="folders" inverseEntity="ICEUser" syncable="YES"/>
+    </entity>
+    <entity name="ICEMedicalTreatment" representedClassName="ICEMedicalTreatment" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="diseases" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEDisease" inverseName="medicalTreatments" inverseEntity="ICEDisease" syncable="YES"/>
+        <relationship name="medicines" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEMedicine" inverseName="medicalTreatments" inverseEntity="ICEMedicine" syncable="YES"/>
+        <relationship name="physicians" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEPhysician" inverseName="medicalTreatments" inverseEntity="ICEPhysician" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEUser" inverseName="medicalTreatments" inverseEntity="ICEUser" syncable="YES"/>
+    </entity>
+    <entity name="ICEMedicine" representedClassName="ICEMedicine" syncable="YES">
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frequency" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="diseases" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEDisease" inverseName="medicines" inverseEntity="ICEDisease" syncable="YES"/>
+        <relationship name="medicalTreatments" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEMedicalTreatment" inverseName="medicines" inverseEntity="ICEMedicalTreatment" syncable="YES"/>
+        <relationship name="physicians" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEPhysician" inverseName="medicines" inverseEntity="ICEPhysician" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEUser" inverseName="medicines" inverseEntity="ICEUser" syncable="YES"/>
+    </entity>
+    <entity name="ICEPhysician" representedClassName="ICEPhysician" syncable="YES">
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postcode" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="streetName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="streetNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="medicalTreatments" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEMedicalTreatment" inverseName="physicians" inverseEntity="ICEMedicalTreatment" syncable="YES"/>
+        <relationship name="medicines" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEMedicine" inverseName="physicians" inverseEntity="ICEMedicine" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEUser" inverseName="physicians" inverseEntity="ICEUser" syncable="YES"/>
+    </entity>
+    <entity name="ICEScan" representedClassName="ICE.ICEScan" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scanData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ICEFolder" inverseName="scans" inverseEntity="ICEFolder" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ICEUser" inverseName="scans" inverseEntity="ICEUser" syncable="YES"/>
+    </entity>
+    <entity name="ICEUser" representedClassName="ICEUser" syncable="YES">
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postcode" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="streetName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="streetNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="allergies" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEAllergy" inverseName="users" inverseEntity="ICEAllergy" syncable="YES"/>
+        <relationship name="bloodType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ICEBloodType" inverseName="users" inverseEntity="ICEBloodType" syncable="YES"/>
+        <relationship name="diseases" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEDisease" inverseName="users" inverseEntity="ICEDisease" syncable="YES"/>
+        <relationship name="father" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ICEFamily" inverseName="father" inverseEntity="ICEFamily" syncable="YES"/>
+        <relationship name="folders" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEFolder" inverseName="user" inverseEntity="ICEFolder" syncable="YES"/>
+        <relationship name="medicalTreatments" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEMedicalTreatment" inverseName="users" inverseEntity="ICEMedicalTreatment" syncable="YES"/>
+        <relationship name="medicines" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEMedicine" inverseName="users" inverseEntity="ICEMedicine" syncable="YES"/>
+        <relationship name="mother" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ICEFamily" inverseName="mother" inverseEntity="ICEFamily" syncable="YES"/>
+        <relationship name="physicians" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEPhysician" inverseName="users" inverseEntity="ICEPhysician" syncable="YES"/>
+        <relationship name="scans" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEScan" inverseName="user" inverseEntity="ICEScan" syncable="YES"/>
+        <relationship name="sons" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ICEFamily" inverseName="sons" inverseEntity="ICEFamily" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ICEAllergy" positionX="-135" positionY="90" width="128" height="75"/>
+        <element name="ICEBloodType" positionX="-135" positionY="197" width="128" height="75"/>
+        <element name="ICEDisease" positionX="25" positionY="81" width="128" height="105"/>
+        <element name="ICEFamily" positionX="-522" positionY="383" width="128" height="105"/>
+        <element name="ICEFolder" positionX="-450" positionY="-0" width="128" height="105"/>
+        <element name="ICEMedicalTreatment" positionX="198" positionY="386" width="128" height="120"/>
+        <element name="ICEMedicine" positionX="-117" positionY="297" width="128" height="150"/>
+        <element name="ICEPhysician" positionX="-623" positionY="-13" width="128" height="195"/>
+        <element name="ICEScan" positionX="-279" positionY="-1" width="128" height="118"/>
+        <element name="ICEUser" positionX="-774" positionY="81" width="128" height="300"/>
+    </elements>
+</model>
