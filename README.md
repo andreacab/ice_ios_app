@@ -1,0 +1,21 @@
+# In Case of Emergency (ICE) - iOS Medcial App
+
+**NB:** work in progress
+
+**Goal:** enable users to save (locally) and/or receive their medical data on their mobile phone. The app will let users synchronize their data with physicians. Physicians will have a way to get a patient's data in an emergency situation where patient is unconscious.
+
+**Achievments:**
+- folders view
+- files view
+- photo camera
+- data persistance
+
+**Roadmap:**
+- Data CRUD operations on remote server
+- Data synchronization with physician
+- Enabling data transfert in an emergency situation where patient is unconscious
+- Android app development
+
+**Development:** Xcode (IDE), Swift, ObjectiveC, SQlite, Git, Github
+
+**iOS Frameworks:** CoreData, MobileCoreServices,...
