@@ -16,3 +16,5 @@
 - Enabling data transfert in an emergency situation where patient is unconscious
 - Android app development
 
+**Development:** Xcode (IDE), Swift, ObjectiveC, SQlite
+**iOS Frameworks:** CoreData, MobileCoreServices,...
