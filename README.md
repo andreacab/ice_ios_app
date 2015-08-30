@@ -2,7 +2,7 @@
 
 **NB:** work in progress
 
-**Goal:** enable users to save locally or receive their medical data on their mobile phone. The app will let users synchronize their data with physician. Physician will have a way to reach a patient's data in an emergency situation where patient is unconscious.
+**Goal:** enable users to save (locally) and/or receive their medical data on their mobile phone. The app will let users synchronize their data with physician. Physician will have a way to reach a patient's data in an emergency situation where patient is unconscious.
 
 **Achievments:**
 - folders view
